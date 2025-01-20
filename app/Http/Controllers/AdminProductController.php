@@ -59,13 +59,14 @@ class AdminProductController extends Controller
                 $itemPath = $item->store('files', 'public');
                 $file_upload = Storage::url($itemPath);
                 $file_name = $item->getClientOriginalName();
+
+                $product->filename = $file_name;
+                $product->file = $file_upload;
             }
 
             $notes = $request->input('notes');
 
             $product->notes = $notes;
-            $product->filename = $file_name;
-            $product->file = $file_upload;
             $product->save();
             return redirect(route('admin.products.list'));
         } catch (\Exception $e) {

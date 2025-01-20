@@ -27,7 +27,6 @@ class AdminHomeController extends Controller
             $email = $request->input('email');
             $phone = $request->input('phone');
             $address = $request->input('address');
-
             $avt = Auth::user()->avatar;
 
             if ($request->hasFile('avatar')) {

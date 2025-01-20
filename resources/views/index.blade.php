@@ -23,54 +23,8 @@
                     <br>
                     Dev Fullstack Team.
                 </p>
-                <button id="open-camera" class="btn btn-sm btn-primary">Contact Administrator</button>
             </div>
         </div>
         <div id="qr-reader"></div>
     </div>
-    <script>
-        $(document).ready(function () {
-            let qrReaderInstance;
-
-            $('#open-camera').on('click', function () {
-                $('#qr-reader').show();
-
-                if (!qrReaderInstance) {
-                    qrReaderInstance = new Html5Qrcode("qr-reader");
-                }
-
-                qrReaderInstance.start(
-                    {facingMode: "environment"},
-                    {
-                        fps: 10,
-                        qrbox: {width: 250, height: 250},
-                    },
-                    function (decodedText, decodedResult) {
-                        console.log("Scanned URL:", decodedText);
-                        if (isValidUrl(decodedText)) {
-                            window.location.href = decodedText;
-                        } else {
-                            alert("Invalid QR code. It does not contain a valid URL.");
-                        }
-
-                        qrReaderInstance.stop();
-                    },
-                    function (errorMessage) {
-                        console.warn("Scan error:", errorMessage);
-                    }
-                ).catch(function (err) {
-                    console.error("Error starting QR reader:", err);
-                });
-            });
-
-            function isValidUrl(string) {
-                try {
-                    new URL(string);
-                    return true;
-                } catch (_) {
-                    return false;
-                }
-            }
-        });
-    </script>
 @endsection

@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Products;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
-    public function show($id)
+    public function show($id, Request $request)
     {
         $product = Products::find($id);
 

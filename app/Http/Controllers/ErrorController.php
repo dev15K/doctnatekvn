@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class ErrorController extends Controller
 {
-    public function notFound()
+    public function notFound(Request $request)
     {
         return view('errors.404');
     }

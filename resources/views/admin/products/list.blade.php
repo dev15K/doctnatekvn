@@ -74,7 +74,6 @@
     </section>
     <script>
         $(document).ready(function () {
-
             $('.btnDelete').click(function () {
                 if (!confirm('Are you want to delete this product?')) {
                     return false;

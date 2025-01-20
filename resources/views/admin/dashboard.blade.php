@@ -289,7 +289,6 @@
                 <!-- End Recent Activity -->
 
             </div><!-- End Right side columns -->
-
         </div>
     </section>
 @endsection

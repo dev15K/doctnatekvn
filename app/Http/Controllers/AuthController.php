@@ -19,7 +19,6 @@ class AuthController extends Controller
         if (Auth::check()) {
             return redirect(route('admin.home'));
         }
-
         return view('auth.login', compact('url_callback'));
     }
 

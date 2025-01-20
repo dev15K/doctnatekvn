@@ -16,25 +16,25 @@
 
         .item_product_ .search-bar {
             margin: 80px 0 0;
-            height: 80px;
+            height: 70px;
             width: 100%;
             min-width: 360px;
-            padding: 0 20px 20px 20px;
+            padding: 0 20px 20px 10px;
             border-bottom: 1px solid rgba(1, 41, 112, 0.2);
         }
 
         .item_product_ .image_logo_ {
-            width: 50px;
+            width: 60px;
             height: auto;
-            max-height: 50px;
+            max-height: 60px;
             overflow: hidden;
         }
 
-        .item_product_ .image_logo_ img{
-            width: 50px;
+        .item_product_ .image_logo_ img {
+            width: 60px;
             height: auto;
             object-fit: cover;
-            max-height: 50px;
+            max-height: 60px;
         }
 
         .item_product_ .search-form {
@@ -58,7 +58,7 @@
         }
 
         .item_product_ .search-form button {
-            padding: 6px 6px;
+            padding: 2px 6px;
             margin-left: -36px;
             background: none;
             border: 1px solid rgba(1, 41, 112, 0.2);
@@ -81,24 +81,24 @@
 
             <div class="search-bar d-flex align-items-center justify-content-between">
                 <div class="image_logo_">
-                    <img src="{{ asset('img/logo.png') }}" alt="">
+                    <img src="{{ asset('img/logo.jpg') }}" alt="">
                 </div>
                 <form class="search-form d-flex align-items-center" action="#">
-                    <input type="text" name="query" placeholder="Tra cứu" title="Enter search keyword">
+                    <input type="text" name="query" placeholder="TRA CỨU" title="Enter search keyword">
                     <button type="submit" title="Search">
                         <img src="{{ asset('img/list.svg') }}" alt="">
                     </button>
                 </form>
             </div>
             <div class="content_">
-                <a href="{{ $product->file }}">
+                <a style="color: #007bff;" href="{{ $product->file }}">
                     {{ $product->filename }}
                 </a>
             </div>
 
             <footer style="margin-left: 0" id="footer" class="footer position-absolute bottom-0 w-100">
                 <div class="copyright">
-                    &copy; Copyright <strong><span>NATEK</span></strong>. All Rights Reserved
+                    <strong>Copyright &copy; 2020-2021 <span>NATEK</span></strong>. <span class="reserved_">All Rights Reserved</span>
                 </div>
             </footer>
         </div>

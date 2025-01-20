@@ -33,7 +33,7 @@
                     <th class="text-center" scope="row">{{ $loop->index + 1 }}</th>
                     <td class="text-center">
                         <div class="d-flex justify-content-center gap-2">
-                            <a href="">{{ $product->filename }}</a>
+                            <a target="_blank" href="{{ route('product.show', $product->id) }}">{{ $product->filename }}</a>
                             <a href="{{ $product->file }}" download="{{ $product->filename }}"><i class="bi bi-download"></i></a>
                         </div>
                     </td>

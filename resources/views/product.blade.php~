@@ -73,7 +73,7 @@
                 </form>
             </div>
             <div class="content_">
-                <a href="{{ $product->file }}">
+                <a href="#!" style="cursor: pointer" data-bs-toggle="modal" data-bs-target="#modalFile">
                     {{ $product->filename }}
                 </a>
 
@@ -135,13 +135,13 @@
         </div>
     </div>
     <script>
-        $(document).ready(function () {
-            $('#printFile').on('click', function () {
+        $(document).ready(function() {
+            $('#printFile').on('click', function() {
                 let fileUrl = '{{ $fileUrl }}';
 
                 let newWindow = window.open(fileUrl, '_blank');
 
-                newWindow.onload = function () {
+                newWindow.onload = function() {
                     newWindow.print();
                 };
             });

@@ -61,10 +61,7 @@
                     @elseif (strpos($mimeType, 'text') === 0)
                         <pre>{{ file_get_contents(public_path($product->file)) }}</pre>
                     @else
-                        <p>
-                            Cannot preview this file {{ $product->filename }}.
-                            <a href="{{ $fileUrl }}" download="{{ $product->filename }}">Download</a>
-                        </p>
+                        <p>Cannot preview this file {{ $product->filename }}. <a href="{{ $fileUrl }}" download>Download</a></p>
                     @endif
                 </div>
                 <div class="modal-footer">

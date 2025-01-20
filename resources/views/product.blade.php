@@ -29,14 +29,14 @@
         }
 
         .item_product_ .image_logo_ {
-            width: 60px;
+            width: 120px;
             height: auto;
             max-height: 60px;
             overflow: hidden;
         }
 
         .item_product_ .image_logo_ img {
-            width: 60px;
+            width: 100%;
             height: auto;
             object-fit: cover;
             max-height: 60px;
@@ -78,16 +78,16 @@
     </style>
     <div class="d-flex align-items-center justify-content-center flex-column vw-100 vh-100">
         <div class="item_product_ vh-100 position-relative" style="background-color: #f4f6f9;">
-{{--            <header style="margin-left: 0" id="header"--}}
-{{--                    class="header bg-white d-flex align-items-center justify-content-between position-absolute top-0 w-100 px-3">--}}
-{{--                <div><i class="bi bi-chevron-left"></i></div>--}}
-{{--                <h4 class="text-center fw-bold mb-0">Quản lý văn bản NATEK</h4>--}}
-{{--                <div><i class="bi bi-three-dots"></i></div>--}}
-{{--            </header>--}}
+            {{--            <header style="margin-left: 0" id="header"--}}
+            {{--                    class="header bg-white d-flex align-items-center justify-content-between position-absolute top-0 w-100 px-3">--}}
+            {{--                <div><i class="bi bi-chevron-left"></i></div>--}}
+            {{--                <h4 class="text-center fw-bold mb-0">Quản lý văn bản NHO</h4>--}}
+            {{--                <div><i class="bi bi-three-dots"></i></div>--}}
+            {{--            </header>--}}
 
             <div class="search-bar bg-white d-flex align-items-center justify-content-between">
                 <div class="image_logo_">
-                    <img src="{{ asset('img/logo.jpg') }}" alt="">
+                    <img src="{{ asset('img/logo.png') }}" alt="">
                 </div>
                 <form class="search-form d-flex align-items-center" action="#">
                     <input type="text" name="query" placeholder="TRA CỨU" title="Enter search keyword">
@@ -104,7 +104,7 @@
 
             <footer style="margin-left: 0" id="footer" class="footer bg-white position-absolute bottom-0 w-100">
                 <div class="copyright">
-                    <strong>Copyright &copy; 2020-2021 <span>NATEK</span></strong>. <span class="reserved_">All Rights Reserved</span>
+                    <strong>Copyright &copy; 2020-2021 <span>NHO</span></strong>. <span class="reserved_">All Rights Reserved</span>
                 </div>
             </footer>
         </div>

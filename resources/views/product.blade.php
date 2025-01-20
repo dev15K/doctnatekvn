@@ -58,10 +58,9 @@
         }
 
         .item_product_ .search-form button {
-            padding: 0px 6px;
+            padding: 6px 6px;
             margin-left: -36px;
             background: none;
-            font-size: 32px;
             border: 1px solid rgba(1, 41, 112, 0.2);
         }
 
@@ -86,7 +85,9 @@
                 </div>
                 <form class="search-form d-flex align-items-center" action="#">
                     <input type="text" name="query" placeholder="Tra cứu" title="Enter search keyword">
-                    <button type="submit" title="Search"><i class="bi bi-list"></i></button>
+                    <button type="submit" title="Search">
+                        <img src="{{ asset('img/list.svg') }}" alt="">
+                    </button>
                 </form>
             </div>
             <div class="content_">

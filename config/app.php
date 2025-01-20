@@ -163,6 +163,7 @@ return [
         RealRashid\SweetAlert\SweetAlertServiceProvider::class,
         Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
         SocialiteProviders\Manager\ServiceProvider::class,
+        SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
         /*
          * Application Service Providers...
          */

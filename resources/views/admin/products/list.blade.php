@@ -51,6 +51,10 @@
                     </td>
                     <td class="text-center">
                         <div class="d-flex gap-2 justify-content-center">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#modalQrCode"
+                                    data-id="{{ $product->id }}" class="btn btn-sm btn-success openQrCode">
+                                QR Code
+                            </button>
                             <a href="{{ route('admin.products.detail', $product->id) }}" class="btn btn-sm btn-primary">Detail</a>
                             <button class="btn btn-sm btn-danger btnDelete" data-product="{{ $product->id }}"
                                     type="button">Delete
@@ -72,6 +76,26 @@
         </table>
         {{ $products->links('pagination::bootstrap-5') }}
     </section>
+
+    <div class="modal fade" id="modalQrCode" tabindex="-1" aria-labelledby="modalQrCodeLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalQrCodeLabel">QR Code</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="showQrCode" class="d-flex align-items-center justify-content-center">
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" id="btnDownload" class="btn btn-primary">Download</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script>
         $(document).ready(function () {
             $('.btnDelete').click(function () {
@@ -82,6 +106,57 @@
                 let productId = $(this).data('product');
 
                 $('#btnDeleteSubmit' + productId).click();
+            })
+
+            $('.openQrCode').click(function () {
+                let productId = $(this).data('id');
+
+                let url = `{{ route('qr.code.api.show.products', ['id' => ':id']) }}`;
+                url = url.replace(':id', productId);
+
+                $.ajax({
+                    url: url,
+                    type: 'GET',
+                    async: false,
+                    success: function (data, textStatus) {
+                        $('#showQrCode').html(data);
+                    },
+                    error: function (request, status, error) {
+                        let data = JSON.parse(request.responseText);
+                        alert(data.message);
+                    }
+                });
+            })
+
+            $('#btnDownload').click(function () {
+                const $svg = $('#showQrCode').find('svg');
+                const svgString = new XMLSerializer().serializeToString($svg[0]);
+
+                const svgBlob = new Blob([svgString], { type: 'image/svg+xml;charset=utf-8' });
+                const url = URL.createObjectURL(svgBlob);
+
+                const img = new Image();
+                img.onload = function () {
+                    const canvas = document.createElement('canvas');
+                    canvas.width = $svg.attr('width');
+                    canvas.height = $svg.attr('height');
+
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(img, 0, 0);
+
+                    const pngUrl = canvas.toDataURL('image/png');
+
+                    const downloadLink = $('<a></a>')
+                        .attr('href', pngUrl)
+                        .attr('download', 'qr-code.png')
+                        .appendTo('body');
+                    downloadLink[0].click();
+
+                    downloadLink.remove();
+                    URL.revokeObjectURL(url);
+                };
+
+                img.src = url;
             })
         })
     </script>

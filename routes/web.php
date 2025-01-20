@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ErrorController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\QrCodeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,6 +37,10 @@ Route::group(['prefix' => 'error'], function () {
     Route::get('/not-found', [ErrorController::class, 'notFound'])->name('error.not.found');
     Route::get('/forbidden', [ErrorController::class, 'forbidden'])->name('error.forbidden');
     Route::get('/unauthorized', [ErrorController::class, 'unauthorized'])->name('error.unauthorized');
+});
+
+Route::group(['prefix' => 'api/qr-code'], function () {
+    Route::get('/products/{id}', [QrCodeController::class, 'generate'])->name('qr.code.api.show.products');
 });
 
 /* Web routes */

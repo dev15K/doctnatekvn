@@ -34,7 +34,7 @@
                     <td class="text-center">
                         <div class="d-flex justify-content-center gap-2">
                             <a href="">{{ $product->filename }}</a>
-                            <a href="{{ $product->file }}" download="{{ $product->filename }}"><i class="bi bi-download"></i></a>
+                            <a href="{{ $product->file }}" name="{{ $product->filename }}" download><i class="bi bi-download"></i></a>
                         </div>
                     </td>
                     <td class="text-center">

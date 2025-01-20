@@ -20,7 +20,7 @@ class AuthController extends Controller
             return redirect(route('admin.home'));
         }
 
-        return view('auth.login', compact('url_callback'));
+        return view('auth.login');
     }
 
     public function handleLogin(Request $request)

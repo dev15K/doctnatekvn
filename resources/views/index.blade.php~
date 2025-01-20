@@ -6,7 +6,7 @@
     <script src="https://unpkg.com/html5-qrcode/minified/html5-qrcode.min.js"></script>
     <style>
         #qr-reader {
-            display: none;
+            /*display: none;*/
             width: 300px;
             margin-top: 20px;
         }
@@ -23,10 +23,10 @@
                     <br>
                     Dev Fullstack Team.
                 </p>
-                <button id="open-camera" class="btn btn-sm btn-primary">Contact Administrator</button>
+                <a href="#" class="btn btn-sm btn-primary">Contact Administrator</a>
             </div>
         </div>
-        <div id="qr-reader"></div>
+        <div id="qr-reader">asasa</div>
     </div>
     <script>
         $(document).ready(function () {
@@ -40,10 +40,10 @@
                 }
 
                 qrReaderInstance.start(
-                    {facingMode: "environment"},
+                    { facingMode: "environment" },
                     {
                         fps: 10,
-                        qrbox: {width: 250, height: 250},
+                        qrbox: { width: 250, height: 250 },
                     },
                     function (decodedText, decodedResult) {
                         console.log("Scanned URL:", decodedText);

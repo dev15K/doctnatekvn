@@ -82,12 +82,14 @@ class AdminProductController extends Controller
         }
         $fileUrl = $product->file;
         $filePath = parse_url($fileUrl, PHP_URL_PATH);
+//        $mimeType = mime_content_type('app/public' . $filePath);
         $filePath = str_replace("/storage", "", $filePath);
         $mimeType = null;
         if ($filePath && Storage::exists('public' . $filePath)) {
             $mimeType = Storage::mimeType('public' . $filePath);
         }
 
+        die($mimeType);
         return view('admin.products.detail', compact('product', 'mimeType', 'filePath'));
     }
 

@@ -10,9 +10,6 @@
             <h2>The page you are looking for does not exist.</h2>
             <a class="btn" href="{{ route('home') }}">Back To Home</a>
             <img src="{{ asset('img/not-found.svg') }}" class="img-fluid py-5" alt="Page Not Found">
-            <div class="credits">
-                Designed by <a href="#">Dev Fullstack</a>
-            </div>
         </section>
 
     </div>

@@ -10,9 +10,6 @@
             <h2>Forbidden Error.</h2>
             <a class="btn" href="{{ route('auth.login') }}?url_callback={{$callback}}">Back To Home</a>
             <img src="{{ asset('img/not-found.svg') }}" class="img-fluid py-5" alt="Forbidden">
-            <div class="credits">
-                Designed by <a href="#">Dev Fullstack</a>
-            </div>
         </section>
 
     </div>

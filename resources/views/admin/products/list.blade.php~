@@ -33,19 +33,24 @@
                     <th class="text-center" scope="row">{{ $loop->index + 1 }}</th>
                     <td class="text-center">
                         <div class="d-flex justify-content-center gap-2">
-                            <a href="{{ route('product.show', $product->id) }}">{{ $product->filename }}</a>
-                            <a href="{{ $product->file }}" download="{{ $product->filename }}"><i class="bi bi-download"></i></a>
+                            <a target="_blank"
+                               href="{{ route('product.show', $product->id) }}">{{ $product->filename }}</a>
+                            <a href="{{ $product->file }}" download="{{ $product->filename }}"><i
+                                    class="bi bi-download"></i></a>
                         </div>
                     </td>
                     <td class="text-center">
                         <div class="d-flex gap-2 justify-content-center">
                             <a href="{{ route('admin.products.detail', $product->id) }}" class="btn btn-sm btn-primary">Detail</a>
-                            <button id="btnDelete" class="btn btn-sm btn-danger" type="button">Delete</button>
+                            <button class="btn btn-sm btn-danger btnDelete" data-product="{{ $product->id }}"
+                                    type="button">Delete
+                            </button>
                             <div class="d-none">
                                 <form method="POST" action="{{ route('admin.products.delete', $product->id) }}">
                                     @csrf
                                     @method('DELETE')
-                                    <button id="btnDeleteSubmit" class="btn btn-sm btn-danger" type="submit">Delete
+                                    <button id="btnDeleteSubmit{{ $product->id }}" class="btn btn-sm btn-danger"
+                                            type="submit">Delete
                                     </button>
                                 </form>
                             </div>
@@ -60,12 +65,14 @@
     <script>
         $(document).ready(function () {
 
-            $('#btnDelete').click(function () {
+            $('.btnDelete').click(function () {
                 if (!confirm('Are you want to delete this product?')) {
                     return false;
                 }
 
-                $('#btnDeleteSubmit').click();
+                let productId = $(this).data('product');
+
+                $('#btnDeleteSubmit' + productId).click();
             })
         })
     </script>

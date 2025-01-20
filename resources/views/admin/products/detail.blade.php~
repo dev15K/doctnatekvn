@@ -20,6 +20,7 @@
             </div>
         @endif
         <form method="POST" action="{{ route('admin.products.update', $product->id) }}" enctype="multipart/form-data">
+            @method('PUT')
             @csrf
             <div class="d-flex gap-2 justify-content-between align-items-end">
                 <div class="form-group w-100">

@@ -76,17 +76,6 @@
                 <a href="{{ $product->file }}">
                     {{ $product->filename }}
                 </a>
-
-                <div class="list_action_ mt-3 d-flex align-items-center justify-content-start gap-2">
-                    <a href="{{ $product->file }}" download="{{ $product->filename }}"
-                       class="btn btn-sm btn-outline-secondary">
-                        <i class="bi bi-download"></i>
-                    </a>
-
-                    <button type="button" id="printFile" class="btn btn-sm btn-outline-secondary">
-                        <i class="bi bi-printer"></i>
-                    </button>
-                </div>
             </div>
 
             <footer style="margin-left: 0" id="footer" class="footer position-absolute bottom-0 w-100">

@@ -41,8 +41,8 @@
 
         <!--Start Profile Page Nav -->
         <li class="nav-item">
-            <a class="nav-link {{ Request::routeIs('home.profile') ? 'active' : 'collapsed' }}"
-               href="{{ route('home.profile') }}">
+            <a class="nav-link {{ Request::routeIs('admin.profile.show') ? 'active' : 'collapsed' }}"
+               href="{{ route('admin.profile.show') }}">
                 <i class="bi bi-person"></i>
                 <span>Profile</span>
             </a>

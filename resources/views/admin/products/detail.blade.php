@@ -59,8 +59,6 @@
                         </video>
                     @elseif ($mimeType === 'application/pdf')
                         <embed src="{{ $fileUrl }}" type="application/pdf" width="100%" height="600px">
-                    @elseif (strpos($mimeType, 'text') === 0)
-                        <pre>{{ file_get_contents(public_path($product->file)) }}</pre>
                     @else
                         <p>
                             Cannot preview this file {{ $product->filename }}.

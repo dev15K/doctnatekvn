@@ -29,7 +29,6 @@
     <!-- Template Main CSS File -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="https://unpkg.com/sweetalert2@7.18.0/dist/sweetalert2.all.js"></script>
 
     <style>
         .layout_loading {
@@ -74,8 +73,6 @@
 <!-- ======= Sidebar ======= -->
 @include('admin.layouts.sidebar')
 <!-- End Sidebar-->
-
-@include('sweetalert::alert')
 
 <div class="layout_loading" id="layout_loading">
     <div class="spinner-border" role="status">

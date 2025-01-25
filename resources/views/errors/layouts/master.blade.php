@@ -16,7 +16,7 @@
     <meta name="keywords" content="{{ 'vanbanvn, vanbanvn.com, quanlyvanban, quanlyvanbannho, nho' }}">
     <meta name="robots" content="index, follow">
 
-    <meta name="google-site-verification" content="{{ '' }}"/>
+    <meta name="google-site-verification" content="udetDJ5lX5LnUK5fm5a4_4OUfYCucTght7llv-XM9DQ" />
 
     <!-- Open Graph (Facebook, LinkedIn) -->
     <meta property="og:title" content="{{ 'Quản lý văn bản NHO' }}">

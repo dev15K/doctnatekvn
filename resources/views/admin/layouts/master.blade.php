@@ -22,7 +22,7 @@
     <meta property="og:title" content="{{ 'Quản lý văn bản NHO' }}">
     <meta property="og:description" content="{{ 'Quản lý văn bản NHO' }}">
     <meta property="og:image" content="{{ asset('img/logo.png') }}">
-    <meta property="og:url" content="{{ '' }}">
+    <meta property="og:url" content="{{ 'https://vanbanvn.com/' }}">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="{{ '' }}">

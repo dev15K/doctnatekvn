@@ -12,26 +12,27 @@
     <link href="{{ asset('img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
     <!-- Meta tag seo -->
-    <meta name="description" content="{{ 'Quản lý văn bản NHO' }}">
-    <meta name="keywords" content="{{ 'vanbanvn, vanbanvn.com, quanlyvanban, quanlyvanbannho, nho' }}">
+    <meta name="description" content="Quản lý văn bản NHO">
+    <meta name="keywords" content="vanbanvn, vanbanvn.com, quanlyvanban, quanlyvanbannho, vanbannho">
     <meta name="robots" content="index, follow">
 
     <meta name="google-site-verification" content="udetDJ5lX5LnUK5fm5a4_4OUfYCucTght7llv-XM9DQ" />
 
     <!-- Open Graph (Facebook, LinkedIn) -->
-    <meta property="og:title" content="{{ 'Quản lý văn bản NHO' }}">
-    <meta property="og:description" content="{{ 'Quản lý văn bản NHO' }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Quản lý văn bản NHO">
+    <meta property="og:description" content="Quản lý văn bản NHO">
     <meta property="og:image" content="{{ asset('img/logo.png') }}">
-    <meta property="og:url" content="{{ 'https://vanbanvn.com/' }}">
+    <meta property="og:url" content="https://vanbanvn.com/">
 
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="{{ '' }}">
-    <meta name="twitter:title" content="{{ 'Quản lý văn bản NHO' }}">
-    <meta name="twitter:description" content="{{ 'Quản lý văn bản NHO' }}">
+    <meta name="twitter:card" content="Quản lý văn bản NHO">
+    <meta name="twitter:title" content="Quản lý văn bản NHO">
+    <meta name="twitter:description" content="Quản lý văn bản NHO">
     <meta name="twitter:image" content="{{ asset('img/logo.png') }}">
 
     <!-- Meta Author -->
-    <meta name="author" content="{{ 'Dev Fullstack' }}">
+    <meta name="author" content="Dev Fullstack">
 
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">

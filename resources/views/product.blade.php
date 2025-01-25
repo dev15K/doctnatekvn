@@ -1,6 +1,6 @@
 @extends('errors.layouts.master')
 @section('title')
-    Product
+    Quản lý văn bản NHO
 @endsection
 @section('content')
     <style>

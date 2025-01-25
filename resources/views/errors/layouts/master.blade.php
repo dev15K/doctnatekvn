@@ -11,9 +11,33 @@
     <link href="{{ asset('img/favicon.png') }}" rel="icon">
     <link href="{{ asset('img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
+    <!-- Meta tag seo -->
+    <meta name="description" content="{{ 'Quản lý văn bản NHO' }}">
+    <meta name="keywords" content="{{ 'vanbanvn, vanbanvn.com, quanlyvanban, quanlyvanbannho, nho' }}">
+    <meta name="robots" content="index, follow">
+
+    <meta name="google-site-verification" content="{{ '' }}"/>
+
+    <!-- Open Graph (Facebook, LinkedIn) -->
+    <meta property="og:title" content="{{ 'Quản lý văn bản NHO' }}">
+    <meta property="og:description" content="{{ 'Quản lý văn bản NHO' }}">
+    <meta property="og:image" content="{{ asset('img/logo.png') }}">
+    <meta property="og:url" content="{{ '' }}">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="{{ '' }}">
+    <meta name="twitter:title" content="{{ 'Quản lý văn bản NHO' }}">
+    <meta name="twitter:description" content="{{ 'Quản lý văn bản NHO' }}">
+    <meta name="twitter:image" content="{{ asset('img/logo.png') }}">
+
+    <!-- Meta Author -->
+    <meta name="author" content="{{ 'Dev Fullstack' }}">
+
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+            rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -40,7 +64,8 @@
 </main>
 <!-- End #main -->
 
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
 
 <!-- Vendor JS Files -->
 <script src="{{ asset('vendor/apexcharts/apexcharts.min.js') }}"></script>

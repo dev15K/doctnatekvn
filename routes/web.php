@@ -41,6 +41,7 @@ Route::group(['prefix' => 'error'], function () {
 
 Route::group(['prefix' => 'api/qr-code'], function () {
     Route::get('/products/{id}', [QrCodeController::class, 'generate'])->name('qr.code.api.show.products');
+    Route::get('/display/{id}', [QrCodeController::class, 'display'])->name('qr.code.api.display');
 });
 
 /* Web routes */
